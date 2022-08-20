@@ -1,0 +1,8 @@
+#include <stdio.h>
+int a;
+int main()
+{   
+	scanf_s("%d", &a);//正常的C语言用scanf
+    printf("%d",a);
+    return 0;
+}
