@@ -1,0 +1,7 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("%.2f", 1.0 + sqrt(3.0) / (4.0 - 2.1));
+	return 0;
+}
