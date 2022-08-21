@@ -1,0 +1,9 @@
+#include <stdio.h>
+float a,b;
+int main()
+{
+	scanf("%f",&a);
+	b=100.0-3.0*a;
+	printf("%.2f",b);
+	return 0;
+}
