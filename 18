@@ -1,0 +1,11 @@
+#include <stdio.h>
+int a,b,c,d;
+int main()
+{
+	scanf("%d", &a);//345
+	b=a%10;//个位
+	c=a/10%10;//十位
+	d=a/100;//百位
+	printf("%d%d%d",b,c,d);
+	return 0;
+}
