@@ -1,0 +1,9 @@
+#include <stdio.h>
+int a,b,c,d,time;
+int main()
+{
+	scanf("%d:%d\n%d:%d",&a,&b,&c,&d);
+	time=(c-a-1)*60+60-b+d-1;
+    printf("%d",time);
+	return 0;
+}
