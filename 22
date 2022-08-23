@@ -1,0 +1,9 @@
+#include <stdio.h>
+float a,b,c;
+int n;
+int main()
+{
+	scanf("%d\n%f %f %f",&n,&a,&b,&c);
+	printf("%.2f",(a+b+c)/n);
+	return 0;
+}
