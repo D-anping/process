@@ -1,0 +1,24 @@
+#include <stdio.h>
+int a,b,sum;
+int main()
+{
+	scanf("%d %d",&a,&b);
+	sum=1500+a*5+b*5;
+	if (sum < 1600)
+	{
+		printf("D");//<1600  D
+	}
+	else if (sum<1700)
+	{
+		printf("C");//1600~1699  C
+	}
+	else if (sum<1800)
+	{
+		printf("B");//1700~1799  B
+	}
+	else
+	{
+		printf("A");//>= 1800  A
+	}
+	return 0;
+}
