@@ -1,0 +1,17 @@
+#include <stdio.h>
+int a,b,c,d,e,i;
+int main()
+{
+	for (i=32;i<100;i++)
+	{
+		a=i*i;
+		b=a%10;//个位
+		c=a/10%10;
+		d=a/100%10;
+		e=a/1000;
+		if (c==b && d==e)
+		{
+			printf("%d\n",a);
+		}
+	}
+}
