@@ -1,0 +1,9 @@
+#include <stdio.h>
+float ave,a,b,c,d,e,f,g,h,i,j;
+int main()
+{
+	scanf("%f %f %f %f %f %f %f %f %f %f",&a,&b,&c,&d,&e,&f,&g,&h,&i,&j);
+	ave=(a+b+c+d+e+f+g+h+i+j)/10;
+	printf("ave=%.1f",ave);
+	return 0;
+}
