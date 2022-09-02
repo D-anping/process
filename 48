@@ -1,0 +1,14 @@
+#include <stdio.h>
+int n,t,i,sum;
+int main()
+{
+	scanf("%d",&n);
+	t=1;
+	for (i=1;i<=n;i++)
+	{
+		t=t*i;
+		sum=sum+t;
+	}
+	printf("%d",sum);
+	return 0;
+}
