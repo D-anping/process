@@ -1,0 +1,17 @@
+#include <stdio.h>
+float fm,fz,sum;
+int i,n;
+int main()
+{
+	fm=1.0;
+	fz=2.0;
+	scanf("%d",&n);
+	for (i=1;i<=n;i++)
+	{
+		sum=fz/fm+sum;
+		fz=fz+fm;
+		fm=fz-fm;
+	}
+	printf("s=%.2f",sum);
+	return 0;
+}
