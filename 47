@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+float sum,fm,i;
+int n;
+int main()
+{
+	scanf("%d",&n);
+	for (i=1;i<=n;i++)
+	{
+		fm=fm+pow(-1,i+1)*(2.00*i-1.00);//分母
+		sum=sum+1.00/fm;
+	}
+	printf("%.2f",sum);
+}
