@@ -1,0 +1,20 @@
+#include <stdio.h>
+int i,n,j;
+float sum,b,t,a;
+int main()
+{
+	scanf("%d",&n);
+	for (i=1;i<=n;i++)
+	{
+		scanf("%f",&t);
+		for (j=1;j<=t;j++)
+		{
+			scanf("%f",&a);
+			sum=sum+a;
+		}
+		b=sum/t;
+		printf("%.2f\n",b);
+		sum=0;
+	}
+	return 0;
+}
