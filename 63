@@ -1,0 +1,11 @@
+#include <stdio.h>
+int N,sum;
+int main()
+{
+	while (scanf("%d",&N)!=EOF)
+	{
+		sum=(1+N)*N/2;
+		printf("%d\n",sum);
+	}
+	return 0;
+}
