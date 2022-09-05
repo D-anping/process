@@ -1,0 +1,24 @@
+#include <stdio.h>
+float i,j,b,sum,a,pai;
+int main()
+{
+	while (scanf("%f",&a)!=EOF)
+	{
+		i=1;
+		b=1.0;
+		sum=0;
+		do
+		{
+			sum=sum+(1/b)*i;
+			i=-i;
+			b=b+2.0;
+		} while ((1.0/b)>=a);
+		if ((1/(b-2))>=a)
+		{
+			sum=sum+(1.0/b)*i;	
+		}
+        pai=sum*4;	
+        printf("%.4f\n",pai);
+	}
+	return 0;
+}
