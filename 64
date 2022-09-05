@@ -1,0 +1,18 @@
+#include <stdio.h>
+int n;
+float i,fm,sum;
+int main()
+{
+	while (scanf("%d",&n)!=EOF)
+	{
+		for (i=1;i<=n;i++)
+		{
+			fm=fm+i;
+			sum=sum+1/fm;
+		}
+		printf("%.4f\n",sum);
+		sum=0;
+		fm=0;
+	}
+	return 0;
+}
