@@ -1,0 +1,28 @@
+#include <stdio.h>
+int mj,gj,xj;//母鸡，公鸡，小鸡
+int main()
+{
+	gj=0;
+	mj=0;
+	xj=0;
+	do
+	{
+		do
+		{
+			do
+			{
+				xj=xj+3;
+				if ((mj*3+gj*5+xj/3)==100 && (mj+gj+xj)==100)
+				{
+					printf("%d %d %d\n",gj,mj,xj);
+				}
+			} while ((mj*3+gj*5+xj/3)<100 && (mj+gj+xj)<100);
+			mj=mj+1;
+			xj=0;
+		} while ((mj*3+gj*5+xj/3)<100 && (mj+gj+xj)<100);
+		gj=gj+1;
+		mj=0;
+		xj=0;
+	} while ((mj*3+gj*5+xj/3)<100 && (mj+gj+xj)<100);
+	return 0;
+}
