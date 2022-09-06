@@ -1,0 +1,32 @@
+#include <stdio.h>
+int x,y,a,b,max,min,i;
+int main()
+{
+	while (scanf("%d %d",&x,&y)!=EOF)
+	{
+		if (x>y)
+		{
+			max=x;
+			min=y;
+		}
+		else
+		{
+			max=y;
+			min=x;
+        }
+		for (i=1;i<=min;i++)
+		{
+			if (x%i==0 && y%i==0)
+			{
+				a=i;//最大公因数
+			}
+		}
+		b=max-1;//最小公倍数
+		do
+		{
+			b=b+1;
+		} while (b%x!=0 || b%y!=0);
+		printf("%d %d\n",a,b);
+	}
+	return 0;
+}
