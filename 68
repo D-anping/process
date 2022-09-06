@@ -1,0 +1,15 @@
+#include <stdio.h>
+int n,a,i;
+int main()
+{
+	while (scanf("%d",&n)!=EOF && n<30 && n>1)
+	{
+		a=1;
+		for (i=1;i<n;i++)
+		{
+			a=(a+1)*2;
+		}
+		printf("%d\n",a);
+	}
+	return 0;
+}
