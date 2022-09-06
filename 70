@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+int n,a,b,c,d;
+int main()
+{
+	while (scanf("%d",&n)!=EOF)
+	{
+		d=n%10;
+		c=n/10%10;
+		b=n/100%10;
+		a=n/1000;
+		if ((pow(a,4)+pow(b,4)+pow(c,4)+pow(d,4))==n)
+		{
+			printf("Yes\n");
+		}
+		else
+		{
+			printf("No\n");
+		}
+	}
+	return 0;
+}
