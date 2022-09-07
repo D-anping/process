@@ -1,0 +1,33 @@
+#include <stdio.h>
+int i,a,b,j,o,max,min;
+int main()
+{
+	while (scanf("%d %d",&a,&b)!=EOF)
+	{
+		j=0;
+		o=0;
+		if (a>b)
+		{
+			max=a;
+			min=b;
+		}
+		else 
+		{
+			max=b;
+			min=a;
+		}
+		for (i=min;i<=max;i++)
+		{
+			if (i%2!=0)
+			{
+				j=i*i*i+j;
+			}
+			else
+			{
+				o=i*i+o;
+			}
+		}
+		printf("%d %d\n",o,j);
+	}
+	return 0;
+}
