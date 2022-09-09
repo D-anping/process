@@ -1,0 +1,39 @@
+#include <stdio.h>
+long a,b,j,sum1,sum2;
+int i,n;
+int main()
+{
+	scanf("%d",&n);
+	for (i=1;i<=n;i++)
+	{
+		scanf("%ld %ld",&a,&b);
+		if (a>=1 && b>=1 && a<=99999 && b<=99999)
+		{
+			for (j=1;j<a;j++)
+			{
+				if (a%j==0)
+				{
+					sum1+=j;
+				}
+			}
+			for (j=1;j<b;j++)
+			{
+				if (b%j == 0)
+				{
+					sum2+=j;
+				}
+			}
+			if (a==sum2 && b==sum1)
+			{
+				printf("YES\n");
+			}
+			else
+			{
+				printf("NO\n");
+			}
+		}	
+		sum1=0;
+		sum2=0;
+	}
+    return 0;
+}
