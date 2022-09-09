@@ -1,0 +1,17 @@
+#include <stdio.h>
+int a;
+char b;
+int main()
+{
+	scanf("%c",&b);
+	a=b;
+	if (a%2==1)
+	{
+		printf("YES\n");
+	}
+	else
+	{
+		printf("NO\n");
+	}
+	return 0;
+}
