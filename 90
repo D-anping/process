@@ -1,0 +1,27 @@
+#include <stdio.h>
+int i,j,n,a[20],t;
+int main()
+{
+	scanf("%d",&n);
+	for (i=1;i<=n;i++)
+	{
+		scanf("%d",&t);
+		if (t<=20)
+		{
+			for (j=0;j<t;j++)
+			{
+				scanf("%d",&a[j]);
+			}
+			for (j=t-1;j>=0;j--)
+			{
+				printf("%d", a[j]);
+				if (j>0)
+				{
+					printf(" ");
+				}
+			}
+			printf("\n");
+		}
+	}
+	return 0;
+}
