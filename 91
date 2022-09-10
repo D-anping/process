@@ -1,0 +1,27 @@
+#include <stdio.h>
+int n,a[20],max,i,t;
+int main()
+{
+	while (scanf("%d", &n) != EOF)
+	{
+		if (n<=20)
+		{
+			for (i=0;i<n;i++)
+			{
+				scanf("%d",&a[i]);
+			}
+			max=a[0];
+			t=0;
+			for (i=1;i<n;i++)
+			{
+				if (max<a[i])
+				{
+					max=a[i];
+					t=i;
+				}
+			}
+			printf("%d %d\n",max,t);
+		}
+	}
+	return 0;
+}
