@@ -1,0 +1,33 @@
+#include <stdio.h>
+int multiple(int a,int b);
+int t,m,a,b,c,n;
+int main()
+{
+	while (scanf("%d %d %d",&a,&b,&c)!=EOF)
+	{
+		if (a*b*c==0)
+		{
+			break;
+		}
+		m=multiple(multiple(a,b),multiple(b,c));
+		printf("%d %d %d\n",m/a,m/b,m/c);
+	}
+	return 0;
+}
+int multiple(int a,int b)
+{
+	m=a;
+	n=b;
+	while (a>0)
+	{
+		if (a<b)
+		{
+			t=a;
+			a=b;
+			b=t;
+		}
+		a=a%b;
+	}
+	t=m*n/b;
+	return t;
+}
