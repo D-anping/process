@@ -1,0 +1,28 @@
+#include <stdio.h>
+int i,a[100],sum=0,n;
+float ave;
+int main()
+{
+	while (scanf("%d",&n)!=EOF)
+	{
+		if (n>=1 && n<=100)
+		{
+			for (i=0;i<n;i++)
+			{
+				scanf("%d",&a[i]);
+				sum+=a[i];
+			}
+			ave=(float)sum/n;
+			for (i=0;i<n;i++)
+			{
+				if (a[i]<ave)
+				{
+					printf("%d ",a[i]);
+				}
+			}
+			printf("\n");
+		}
+		sum=0;
+	}
+	return 0;
+}
