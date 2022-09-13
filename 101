@@ -1,0 +1,124 @@
+#include <stdio.h>
+int a[32],N,R,i,t,m=0;
+int main()
+{
+	while (scanf("%d %d",&N,&R)!=EOF)
+	{
+		if (N>=0 && R!=10)
+		{
+			i=0;
+			do
+			{
+				a[i]=N%R;
+				N=(N-a[i])/R;
+				i++;
+			} while (N>=R);
+			t=i;
+			if (N!=0)
+			{
+				a[t]=N;
+			}
+			else
+			{
+				t=t-1;
+			}
+			for (i=t;i>=0;i--)
+			{
+				if (a[i]==10)
+				{
+					printf("A");
+				}
+				else if (a[i]==11)
+				{
+					printf("B");
+				}
+				else if (a[i]==12)
+				{
+					printf("C");
+				}
+				else if (a[i]==13)
+				{
+					printf("D");
+				}
+				else if (a[i]==14)
+				{
+					printf("E");
+				}
+				else if (a[i]==15)
+				{
+					printf("F");
+				}
+				else if ( a[i]==0 && m==1)
+				{
+					printf("%d",a[i]);
+				}
+				else
+				{
+					printf("%d",a[i]);
+					m=1;
+				}
+			}
+			printf("\n");
+		}
+		if (N<0 && R!=10)
+		{
+			N=-N;
+			i=0;
+			do
+			{
+				a[i]=N%R;
+				N=(N-a[i])/R;
+				i++;
+			} while (N>=R);
+			t=i;
+			printf("-");
+			if (N!=0)
+			{
+				a[t]=N;
+			}
+			else
+			{
+				t=t-1;
+			}
+			for (i=t;i>=0;i--)
+			{
+				if (a[i]==10)
+				{
+					printf("A");
+				}
+				else if (a[i]==11)
+				{
+					printf("B");
+				}
+				else if (a[i]==12)
+				{
+					printf("C");
+				}
+				else if (a[i]==13)
+				{
+					printf("D");
+				}
+				else if (a[i]==14)
+				{
+					printf("E");
+				}
+				else if (a[i]==15)
+				{
+					printf("F");
+				}
+				else if (a[i]==0 && m==1)
+				{
+					printf("%d",a[i]);
+				}
+				else
+				{
+					printf("%d",a[i]);
+					m=1;
+				}
+			}
+			printf("\n");
+		}
+		m=0;
+	}
+	return 0;
+}
