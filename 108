@@ -1,0 +1,40 @@
+#include <stdio.h>
+int a[1999],N,M,i,j,k,min,t;
+int main()
+{
+	scanf("%d\n",&N);
+	for (i=0;i<N;i++)
+	{
+		scanf("\n%d\n",&M);
+		if (M>=2 && M<2000)
+		{
+			for (j=0;j<M;j++)
+			{
+				scanf("%d",&a[j]);
+			}
+			t=0;
+			for (j=1;j<M;j++)
+			{
+				min=a[j];
+				for (k=j-1;k>=0 && min<=a[k];k--)
+				{
+					if (k==j-1)
+					{
+						t--;
+					}
+					a[k+1]=a[k];
+					t++;
+				}
+				t++;
+				a[k+1]=min;
+			}
+			printf("%d\n%d",t,a[0]);
+			for (j=1;j<M;j++)
+			{
+				printf(" %d",a[j]);
+			}
+			printf("\n");
+		}
+	}
+	return 0;
+}
