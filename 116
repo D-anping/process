@@ -1,0 +1,32 @@
+#include <stdio.h>
+int a[30][30],n,i,j,sum = 0;
+int main()
+{
+	while (scanf("%d",&n)!=EOF)
+	{
+		for (i=0;i<n;i++)
+		{
+			for (j=0;j<=i;j++)
+			{
+				if (j==0)
+				{
+					a[i][j]=1;
+					printf("%d",a[i][j]);
+				}
+				if(j>0 && j<i)
+				{
+					a[i][j]=a[i-1][j]+a[i-1][j-1];
+					printf(" %d",a[i][j]);
+				}
+				if (j==i && j!=0)
+				{
+					a[i][j]=1;
+					printf(" %d",a[i][j]);
+				}
+			}
+			printf("\n");
+		}
+		printf("\n");
+	}
+	return 0;
+}
