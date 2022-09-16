@@ -1,0 +1,54 @@
+#include <stdio.h>
+int a[6][6],n,m,i,j,max,x,y,t;
+int main()
+{
+	while (scanf("%d",&n)!=EOF)
+	{
+		for (i=0;i<n;i++)
+		{
+			for (j=0;j<n;j++)
+			{
+				scanf("%d",&a[i][j]);
+			}
+		}
+		for (i=0;i<n;i++)
+		{
+			max=a[i][0];
+			for (j=1;j<n;j++)
+			{
+				if (max<a[i][j])
+				{
+					max=a[i][j];
+					y=j;
+				}
+			}
+			t=0;
+			for (x=0;x<n;x++)
+			{
+				if (max>a[x][y])
+				{
+					t++;
+				}
+			}
+			if (t==0)
+			{
+				if (m==0)
+				{
+					printf("%d %d",i,y);
+					m++;
+				}
+				else
+				{
+					printf(" %d %d",i,y);
+				}
+			}
+		}
+		if (m==0)
+		{
+			printf("NO");
+		}
+		printf("\n");
+		m=0;
+	}
+	return 0;
+}
