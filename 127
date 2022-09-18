@@ -1,0 +1,39 @@
+#include <stdio.h>
+int a[100][100],b[100][100],c[100][100],i,j,n;
+int main()
+{
+	while (scanf("%d",&n)!=EOF)
+	{
+		for (i=0;i<n;i++)
+		{
+			for (j=0;j<n;j++)
+			{
+				scanf("%d",&a[i][j]);
+			}
+		}
+		for (i=0;i<n;i++)
+		{
+			for (j=0;j<n;j++)
+			{
+				b[j][i]=a[i][j];
+			}
+		}
+		for (i=0;i<n;i++)
+		{
+			for (j=0;j<n;j++)
+			{
+				c[i][j]=b[i][j]+a[i][j];
+			}
+		}
+		for (i=0;i<n;i++)
+		{
+			printf("%d",c[i][0]);
+			for (j=1;j<n;j++)
+			{
+				printf(" %d",c[j][i]);
+			}
+			printf("\n");
+		}
+	}
+	return 0;
+}
