@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+int i,n,m;
+char ch[101],a[5];
+int main()
+{
+	scanf("%d",&n);
+	gets(a);
+	for (i=0;i<n;i++)
+	{
+		scanf("%s",ch);
+		m=strlen(ch);
+		if (ch[m-1]=='y' || ch[m-1]=='s' || ch[m-1]=='x' || ch[m-1]=='o')
+		{
+			strcat(ch,"es");
+		}
+		else if ((ch[m-1]=='h' && ch[m-2]=='c') || (ch[m-2]=='s' && ch[m-1]=='h'))
+		{
+			strcat(ch,"es");
+		}
+		else
+		{
+			strcat(ch,"s");
+		}
+		printf("%s\n",ch);
+	}
+	return 0;
+}
