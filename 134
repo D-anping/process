@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+char ch[101];
+int n,a,e,i,o,u,j,k,p;
+int main()
+{
+	scanf("%d\n",&p);
+	for (k=0;k<p;k++)
+	{
+		gets(ch);
+		n=strlen(ch);
+		a=0;
+		e=0;
+		i=0;
+		o=0;
+		u=0;
+		for (j=0;j<n;j++)
+		{
+			if (ch[j]=='a')
+			{
+				a++;
+			}
+			else if (ch[j]=='e')
+			{
+				e++;
+			}
+			else if (ch[j]=='i')
+			{
+				i++;
+			}
+			else if (ch[j]=='o')
+			{
+				o++;
+			}
+			else if (ch[j]=='u')
+			{
+				u++;
+			}
+		}
+		printf("a:%d\ne:%d\ni:%d\no:%d\nu:%d\n",a,e,i,o,u);
+		if (k<p-1)
+		{
+			printf("\n");
+		}
+	}
+	return 0;
+}
