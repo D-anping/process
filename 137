@@ -1,0 +1,45 @@
+#include <stdio.h>
+int n,i;
+char a[5],ch[5];
+int main()
+{
+	scanf("%d",&n);
+	gets(a);
+	for (i=0;i<n;i++)
+	{
+		scanf("%s",ch);
+		if (ch[0]=='A' && ch[1]=='C')
+		{
+			printf("Accepted\n");
+		}
+		else if (ch[0] == 'P' && ch[1] == 'E')
+		{
+			printf("Presentation Error\n");
+		}
+		else if (ch[0]=='W' && ch[1]=='A')
+		{
+			printf("Wrong Answer\n");
+		}
+		else if (ch[0]=='R' && ch[1]=='E')
+		{
+			printf("Runtime Error\n");
+		}
+		else if (ch[0]=='T' && ch[1]=='L' && ch[2]=='E')
+		{
+			printf("Time Limit Exceeded\n");
+		}
+		else if (ch[0]=='M' && ch[1]=='L' && ch[2]=='E')
+		{
+			printf("Memory Limit Exceeded\n");
+		}
+		else if (ch[0]=='O' && ch[1]=='L' && ch[2]=='E')
+		{
+			printf("Output Limit Exceeded\n");
+		}
+		else if (ch[0]=='C' && ch[1]=='E')
+		{
+			printf("Compilation Error\n");
+		}
+	}
+	return 0;
+}
