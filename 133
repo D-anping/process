@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+char ch[9];
+int n,i;
+int main()
+{
+	gets(ch);
+	printf("I am ");
+	n=strlen(ch);
+	for (i=0;i<n;i++)
+	{
+		printf("%c",ch[i]);
+	}
+	printf(",yes,I can!\n");
+	return 0;
+}
