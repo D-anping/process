@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+char ch[2000],c[5];
+int n,i,j,k,x,y,a[2000],b[2000],t;
+int main()
+{
+	scanf("%d",&n);
+	gets(c);
+	for (i=0;i<n;i++)
+	{
+		scanf("%s",ch);
+		x=strlen(ch);
+		y=x/4;
+		for (j=0;j<x;j++)
+		{
+			if (ch[j]=='0')
+			{
+				b[j]=0;
+			}
+			else if (ch[j]=='1')
+			{
+				b[j]=1;
+			}
+		}
+		if (x%4!=0)
+		{
+			y=y+1;
+		}
+		for (j=0;j<y;j++)
+		{
+			a[j]=0;
+		}
+		t=x-(y-1)*4;
+		for (j=x-1;j>=3;j=j-4)
+		{
+			for (k=0;k<4;k++)
+			{
+				a[y-1]+=b[j-k]*pow(2,k);
+			}
+			y--;
+		}
+		if (x%4!=0)
+		{
+			for (k=t-1;k>=0;k--)
+			{
+				a[0]+=b[k]*pow(2,t-1-k);
+			}
+		}
+		y=x/4;
+		if (x%4!=0)
+		{
+			y=y+1;
+		}
+		for (j=0;j<y;j++)
+		{
+			if (a[j]==10)
+			{
+				printf("A");
+			}
+			else if (a[j]==11)
+			{
+				printf("B");
+			}
+			else if (a[j]==12)
+			{
+				printf("C");
+			}
+			else if (a[j]==13)
+			{
+				printf("D");
+			}
+			else if (a[j]==14)
+			{
+				printf("E");
+			}
+			else if (a[j]==15)
+			{
+				printf("F");
+			}
+			else
+			{
+				printf("%d",a[j]);
+			}
+		}
+		printf("\n");
+	}
+	return 0;
+}
