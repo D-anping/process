@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+char ch[1000],c[5];
+int n,i,m,j,t;
+int main()
+{
+	scanf("%d",&n);
+	gets(c);
+	for (i=0;i<n;i++)
+	{
+		gets(ch);
+		m=strlen(ch);
+		if ((ch[0]>='a' && ch[0]<='z') || (ch[0]>='A' && ch[0]<='Z') || ch[0]=='_')
+		{
+			t=0;
+			for (j=1;j<m;j++)
+			{
+				if((ch[j]>='a' && ch[j]<='z') || (ch[j]>='A' && ch[j]<='Z') || ch[j]=='_' || (ch[j]>='0' && ch[j]<='9'))
+				{
+					t++;
+				}
+			}
+			if (t==m-1)
+			{
+			    printf("yes\n");
+			}
+			else
+			{
+				printf("no\n");
+			}
+		}
+		else
+		{
+			printf("no\n");
+		}
+
+	}
+	return 0;
+}
