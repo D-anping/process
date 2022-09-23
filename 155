@@ -1,0 +1,26 @@
+#include <stdio.h>
+long long multiple(int n)
+{
+	long long sum=1;
+	for (int i=1;i<=n;i++)
+	{
+		sum=sum*i;
+	}
+	return sum;
+}
+int n,i;
+long long t,s;
+int main()
+{
+	while (scanf("%d",&n)!=EOF)
+	{
+		s=0;
+		for (i=1;i<=n;i++)
+		{
+			t=multiple(i);
+			s+=t;
+		}
+		printf("%lld\n",s);
+	}
+	return 0;
+}
