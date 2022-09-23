@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+char ch[100];
+int n,i;
+int main()
+{
+	while (gets(ch) != NULL)
+	{
+		n=strlen(ch);
+		for (i=0;i<n;i++)
+		{
+			if (ch[i]>='A' && ch[i]<='M')
+			{
+				ch[i]='Z'-(ch[i]-'A');
+			}
+			else if (ch[i]>='N' && ch[i]<='Z')
+			{
+				ch[i]='M'-(ch[i]-'N');
+			}
+		}
+		for (i=0;i<n;i++)
+		{
+			printf("%c",ch[i]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
