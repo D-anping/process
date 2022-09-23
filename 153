@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <string.h>
+char ch[2000001],a[1000001],b[1000001];
+long long n,i,j,t,k,m;
+int main()
+{
+	while (scanf("%s",ch)!=EOF)
+	{
+		n=strlen(ch);
+		for (i=0;i<n;i++)
+		{
+			if (ch[i]=='#')
+			{
+				t=i;
+				break;
+			}
+		}
+		for (i=0;i<t;i++)
+		{
+			a[i]=ch[i];
+		}
+		k=0;
+		for (i=t+1;i<n-1;i++)
+		{
+			b[k]=ch[i];
+			k++;
+		}
+		m=0;
+		for (j=0;j<k;j++)
+		{
+			for (i=0;i<t;i++)
+			{
+				if (a[i]==b[j])
+				{
+					m++;
+					break;
+				}
+			}
+		}
+		if (m==k)
+		{
+			printf("Yes\n");
+		}
+		else
+		{
+			printf("No\n");
+		}
+	}
+	return 0;
+}
