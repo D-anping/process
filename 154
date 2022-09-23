@@ -1,0 +1,20 @@
+#include <stdio.h>
+int multiple(int n)
+{
+	int sum=1;
+	for (int i=1;i<=n;i++)
+	{
+		sum=sum*i;
+	}
+	return sum;
+}
+int n,t;
+int main()
+{
+	while (scanf("%d", &n) != EOF)
+	{
+	t=multiple(n);
+	printf("%d\n",t);
+	}
+	return 0;
+}
