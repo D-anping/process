@@ -1,0 +1,21 @@
+long long multiple(int n)
+{
+	long long sum = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		sum = sum * i;
+	}
+	return sum;
+}
+#include <stdio.h>
+long long z;
+int n,m;
+int main()
+{
+	while (scanf("%d %d",&n,&m)!=EOF)
+	{
+		z=multiple(n)/(multiple(m)*multiple(n-m));
+		printf("%lld\n", z);
+	}
+	return 0;
+}
