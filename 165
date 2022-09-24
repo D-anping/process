@@ -1,0 +1,31 @@
+struct time
+{
+    int h;
+    int m;
+    int s;
+}a[1000];
+#include <stdio.h>
+int hour = 0,minute=0,seconds=0,i,n;
+int main()
+{
+    scanf("%d",&n);
+    for (i=0;i<n;i++)
+    {
+        scanf("%d%d%d",&a[i].h,&a[i].m,&a[i].s);
+        hour+=a[i].h;
+        minute+=a[i].m;
+        seconds+=a[i].s;
+        while (seconds>=60)
+        {
+            seconds=seconds-60;
+            minute++;
+        }
+        while (minute>=60)
+        {
+            minute=minute-60;
+            hour++;
+        }
+    }
+    printf("%dhour %dminute %dsecond\n",hour,minute,seconds);
+    return 0;
+}
