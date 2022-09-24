@@ -1,0 +1,14 @@
+struct student
+{
+	char name[20];
+	char sex[10];
+	int year;
+	float weight;
+}a;
+#include <stdio.h>
+int main()
+{
+	scanf("%s%s%d%f",a.name,a.sex,&a.year,&a.weight);
+	printf("%s %s %d %.1f\n",a.name,a.sex,a.year,a.weight);
+	return 0;
+}
