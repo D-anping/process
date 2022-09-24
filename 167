@@ -1,0 +1,26 @@
+struct student
+{
+	char name[20];
+	int height;
+	int number;
+}s[200],max;
+#include <stdio.h>
+int i,n;
+int main()
+{
+	scanf("%d",&n);
+	for (i=0;i<n;i++)
+	{
+		scanf("%s%d%d",s[i].name,&s[i].height,&s[i].number);
+	}
+	max=s[0];
+	for (i = 1; i <n;i++)
+	{
+		if (s[i].height>max.height || (s[i].height==max.height && s[i].number<max.number))
+		{
+			max=s[i];
+		}
+	}
+	printf("%s %d %d\n",max.name,max.height,max.number);
+	return 0;
+}
