@@ -1,0 +1,26 @@
+int countdigit(long long number,int digit)
+{
+	long long a,t;
+	t=0;
+	do
+	{
+		a=number%10;
+		if (digit==a)
+		{
+			t++;
+		}
+		number=number/10;
+	} while (number>0);
+	return t;
+}
+#include <stdio.h>
+long long n;
+int m;
+int main()
+{
+	while (scanf("%lld %d",&n,&m)!=EOF)
+	{
+		printf("%d\n",countdigit(n,m));
+	}
+	return 0;
+}
