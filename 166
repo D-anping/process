@@ -1,0 +1,62 @@
+struct window
+{
+	int z;
+	int y;
+	int x;
+	int s;
+}a,b;
+#include <stdio.h>
+#include <math.h>
+int k1,k2,g1,g2,m,n,p,t[4],l,i,j;
+int main()
+{
+	scanf("%d%d%d%d\n%d%d%d%d",&a.z,&a.y,&a.s,&a.x,&b.z,&b.y,&b.s,&b.x);
+	k1=abs(a.z-a.y);
+	k2=abs(b.y-b.z);
+	g1=abs(a.s-a.x);
+	g2=abs(b.x-b.s);
+	if (abs(a.z-b.y)>=k1+k2 || abs(a.y-b.z)>=k1+k2 || abs(a.x-b.s)>=g1+g2 || abs(a.s-b.x)>=g1+g2)
+	{
+		p=0;
+	}
+	else if (abs(a.z-b.y)<k1+k2 && abs(a.y-b.z)<k1+k2 && abs(a.x-b.s)<g1+g2 && abs(a.s-b.x)<g1+g2)
+	{
+		t[0]=a.z;
+		t[1]=a.y;
+		t[2]=b.z;
+		t[3]=b.y;
+		for (i=0;i<4;i++)
+		{
+			for (j=3;j>i;j--)
+			{
+				if (t[j]>t[j-1])
+				{
+					l=t[j];
+					t[j]=t[j-1];
+					t[j-1]=l;
+				}
+			}
+		}
+		m=t[1]-t[2];
+		t[0]=a.s;
+		t[1]=a.x;
+		t[2]=b.s;
+		t[3]=b.x;
+		for (i=0;i<4;i++)
+		{
+			for (j=3;j>i;j--)
+			{
+				if (t[j]>t[j-1])
+				{
+					l=t[j];
+					t[j]=t[j-1];
+					t[j-1]=l;
+				}
+			}
+		}
+		n=t[1]-t[2];
+		p=n*m;
+	}
+	printf("%d\n",p);
+	return 0;
+}
