@@ -1,0 +1,44 @@
+int perfect(int n)
+{
+	int sum=0;
+	for (int i=1;i<n;i++)
+	{
+		if (n%i==0)
+		{
+			sum+=i;
+		}
+	}
+	int m;
+	if (sum==n)
+	{
+		m=0;
+	}
+	else
+	{
+		m=1;
+	}
+	return m;
+}
+#include <stdio.h>
+int n,m,i,t;
+int main()
+{
+	while (scanf("%d %d",&n,&m)!=EOF)
+	{
+		t=0;
+		for (i=n;i<=m;i++)
+		{
+			if (perfect(i)==0 && t==0)
+			{
+				printf("%d",i);
+				t++;
+			}
+			if (perfect(i)==0 && t==0)
+			{
+				printf(" %d",i);
+			}
+		}
+		printf("\n");
+	}
+	return 0;
+}
