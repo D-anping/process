@@ -1,0 +1,54 @@
+int prime(int n)
+{
+	int i;
+	for (i=2;i<n;i++)
+	{
+		if (n%i==0)
+		{
+			break;
+		}
+	}
+	int c;
+	if (i==n)
+	{
+		c=0;
+	}
+	else if (n==2)
+	{
+		c=0;
+	}
+	else if (n==1)
+	{
+		c=1;
+	}
+	else
+	{
+		c=1;
+	}
+
+	return c;
+}
+#include <stdio.h>
+int n,m,i;
+int main()
+{
+	while (scanf("%d %d",&n,&m)!=EOF && (n!=0 || m!=0))
+	{
+		for (i=n;i<=m;i++)
+		{
+			if (prime(i*i+i+41)==1)
+			{
+				break;
+			}
+		}
+		if (i==m+1)
+		{
+			printf("Ok\n");
+		}
+		else
+		{
+			printf("Sorry\n");
+		}
+	}
+	return 0;
+}
