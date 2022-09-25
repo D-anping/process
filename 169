@@ -1,0 +1,24 @@
+#include <stdio.h>
+int n,i,x=0,y=0,sum=0,a;
+char c,b[10];
+int main()
+{
+	scanf("%d",&n);
+	for (i=0;i<n;i++)
+	{
+		scanf("\n%c",&c);
+		if (c=='C')
+		{
+			scanf("%s",b);
+			x++;
+		}
+		else if (c=='N')
+		{
+			scanf(" %d",&a);
+			sum+=a;
+			y++;
+		}
+	}
+	printf("%d %d\n",x,sum/y);
+	return 0;
+}
