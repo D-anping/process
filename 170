@@ -1,0 +1,32 @@
+#include <stdio.h>
+char ch[100],c;
+int w,m,i,n,t;
+long a,sum;
+int main()
+{
+	scanf("%d",&n);
+	for (i=0;i<n;i++)
+	{
+		scanf("\n%c",&c);
+		if (c=='i')
+		{
+			scanf("%s",ch);
+			if (ch[16]%2==0)
+			{
+				w++;
+			}
+			else
+			{
+				m++;
+			}
+		}
+		else
+		{
+			scanf("%ld",&a);
+			sum+=a;
+			t++;
+		}
+	}
+	printf("%d %d %ld\n",m,w,sum/t);
+	return 0;
+}
