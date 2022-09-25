@@ -1,0 +1,19 @@
+void change(int *m,int *n)
+{
+	int t;
+	t=*m;
+	*m=*n;
+	*n=t;
+}
+#include <stdio.h>
+int a,b,*p1=&a,*p2=&b;
+int main()
+{
+	scanf_s("%d %d",&a,&b);
+	if (a>b)
+	{
+		change(p1,p2);
+	}
+	printf("%d\n",*p1*2);
+	return 0;
+}
