@@ -1,0 +1,19 @@
+#include <stdio.h>
+int a,b,*p1=&a,*p2=&b;
+int main()
+{
+	scanf("%d  %d",p1,p2);
+	if (*p1==*p2)
+	{
+		printf("tie\n");
+	}
+	else if ((*p1==1 && *p2==2) || (*p1==2 && *p2==3) || (*p1==3 && *p2==1))
+	{
+		printf("win\n");
+	}
+	else
+	{
+		printf("lose\n");
+	}
+	return 0;
+}
