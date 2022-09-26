@@ -1,0 +1,20 @@
+#include <stdio.h>
+int a,b,*p1=&a,*p2=&b,m,n;
+int main()
+{
+	scanf("%d  %d",p1,p2);
+	m=a/b;//空瓶的数量
+	n=*p1+m;//使用的数量
+	m=a-m*b+m;
+	while (m>=b)
+	{
+		n++;
+		m=m-b+1;
+	}
+	if (m+1==b)
+	{
+		n++;
+	}
+	printf("%d",n);
+	return 0;
+}
