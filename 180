@@ -1,0 +1,23 @@
+#include <stdio.h>
+int a,b,k,*p1=&a,*p2=&b,*p3=&k;
+int main()
+{
+	scanf_s("%d %d\n%d",p1,p2,p3);
+	if (k==1)
+	{
+		printf("%d\n",a+b);
+	}
+	else if (k==2)
+	{
+		printf("%d\n",a-b);
+	}
+	else if (k==3)
+	{
+		printf("%d\n",a*b);
+	}
+	else if (k==4)
+	{
+		printf("%d\n",a/b);
+	}
+	return 0;
+}
