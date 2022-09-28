@@ -1,0 +1,26 @@
+#include <stdio.h>
+int n,m,sum=0,t,*p1=&n,*p2=&m;
+int main()
+{
+	scanf("%d %d",p1,p2);
+	if (*p1<=2000)
+	{
+		sum+=10;
+	}
+	else if((*p1-2000+499)/500>0)
+	{
+		t=(*p1-2000+499)/500;
+		sum+=10+t*4;
+	}
+	if (*p1/5000>0)
+	{
+		t=*p1/5000;
+		sum=sum-t*5;
+	}
+	if (*p2==1)
+	{
+		sum+=5;
+	}
+	printf("%d",sum);
+	return 0;
+}
