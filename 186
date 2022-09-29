@@ -1,0 +1,36 @@
+#include <stdio.h>
+int a[100000],b[25],n,i,j,sum,t;
+int *p1=&n,*p3=b;
+int main()
+{
+	a[0]=1;
+	a[1]=2;
+	scanf("%d",p1);
+	for (i=0;i<n;i++,p3++)
+	{
+		scanf("%d",p3);
+	}
+	for (i=0;i<n;i++)
+	{
+		j=0;
+		sum=0;
+		while (a[j]+a[j+1]<=b[i])
+		{
+			a[j+2]=a[j]+a[j+1];
+			j++;
+		}
+		for (t=0;t<=j+2;t++)
+		{
+			if (a[t]%2==0)
+			{
+				sum+=a[t];
+			}
+		}
+		if (b[i]==1)
+		{
+			sum=0;
+		}
+		printf("%d\n",sum);
+	}
+	return 0;
+}
