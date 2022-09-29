@@ -1,0 +1,8 @@
+#include <stdio.h>
+int a,*p=&a;
+int main()
+{
+	scanf("%d",p);
+	printf("%d",*p);
+	return 0;
+}
