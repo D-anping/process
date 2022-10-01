@@ -1,0 +1,29 @@
+struct string
+{
+	char c[100];
+}ch[3],t,*p=ch;
+#include <stdio.h>
+#include <string.h>
+int i,j;
+int main()
+{
+	gets(ch[0].c);
+	for (i=1;i<3;i++)
+	{
+		gets(ch[i].c);
+	}
+	for (i=0;i<3;i++)
+	{
+		for (j=2;j>i;j--)
+		{
+			if (strcmp(ch[j].c,ch[j-1].c)<0)
+			{
+				t=*(p+j);
+				*(p+j)=*(p+j-1);
+				*(p+j-1)=t;
+			}
+		}
+	}
+	printf("%s\n%s\n%s\n",ch[0].c,ch[1].c,ch[2].c);
+	return 0;
+}
