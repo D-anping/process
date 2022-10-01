@@ -1,0 +1,40 @@
+#include <string.h>
+int StrCmp(char *s1,char *s2)
+{
+	int n,m,max,i,l,k=0;
+	n=strlen(s1);
+	m=strlen(s2);
+	max=m;
+	if (max<n)
+	{
+		max=n;
+	}
+	for (i=0;i<max;i++)
+	{
+		if (*(s1+i)!=*(s2+i))
+		{
+			l=*(s1+i)-*(s2+i);
+			break;
+		}
+		else
+		{
+			k++;
+		}
+	}
+	if (m==n && m==k)
+	{
+		l=0;
+	}
+	return l;
+}
+#include <stdio.h>
+char ch1[100],ch2[100],*p1=ch1,*p2=ch2,c[10];
+int t;
+int main()
+{
+	gets(ch1);
+	gets(ch2);
+	t=StrCmp(p1,p2);
+	printf("%d\n",t);
+	return 0;
+}
