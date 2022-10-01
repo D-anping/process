@@ -1,0 +1,40 @@
+void change(int *p)
+{
+	int i,min,max,x=0,d=0,t;
+	min=*p;
+	max=*p;
+	for (i=1;i<10;i++)
+	{
+		if (*(p+i)<min)
+		{
+			min=*(p+i);
+			x=i;
+		}
+		else if (*(p+i)>max)
+		{
+			max=*(p+i);
+			d=i;
+		}
+	}
+	t=*p;
+	*p=*(p+x);
+	*(p+x)=t;
+	t=*(p+9);
+	*(p+9)=*(p+d);
+	*(p+d)=t;
+}
+#include <stdio.h>
+int a[10],*p=a,i;
+int main()
+{
+	for (i=0;i<10;i++)
+	{
+		scanf("%d",p+i);
+	}
+	change(p);
+	for (i=0;i<10;i++)
+	{
+		printf("%d\n",*(p+i));
+	}
+	return 0;
+}
