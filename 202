@@ -1,0 +1,32 @@
+#include <stdio.h>
+int min,sum,i,j,a[1000],n,max;
+int main()
+{
+	while (scanf("%d",&n)!=EOF && n!=0)
+	{
+		for (i=0;i<n;i++)
+		{
+			scanf("%d",&a[i]);
+		}
+		min=0;
+		for (j=n-1;j>=0;j--)
+		{
+			max=a[j];
+			sum=a[j];
+			for (i=j;i>=0;i--)
+			{
+				if (max>a[i])
+				{
+					sum+=a[i];
+					max=a[i];
+				}
+			}
+			if (sum>min)
+			{
+				min=sum;
+			}
+		}
+		printf("%d\n",min);
+	}
+	return 0;
+}
