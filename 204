@@ -1,0 +1,83 @@
+#include <stdio.h>
+char a[10][10],b[10][10],ch[10];
+int n,i,j,x,y,t,c[10][10];
+int main()
+{
+	scanf("%d",&n);
+	for (i=0;i<n;i++)
+	{
+		gets(ch);
+		for (j=0;j<n;j++)
+		{
+			scanf("%c",&a[i][j]);
+		}
+	}
+	for (i=0;i<n;i++)
+	{
+		gets(ch);
+		for (j=0;j<n;j++)
+		{
+			scanf("%c",&b[i][j]);
+		}
+	}
+	t=0;
+	for (i=0;i<n;i++)
+	{
+		for (j=0;j<n;j++)
+		{
+			if (b[i][j]=='x')
+			{
+				if (a[i][j]=='*')
+				{
+					t=1;
+				}
+				else
+				{
+					for (x=i-1;x<i+2;x++)
+					{
+						for (y=j-1;y<j+2;y++)
+						{
+							if (x>=0 && x<n && y>=0 && y<n)
+							{
+								if (a[x][y]=='*')
+								{
+									c[i][j]+=1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	if (t==1)
+	{
+		for (i=0;i<n;i++)
+		{
+			for (j=0;j<n;j++)
+			{
+				printf("%c",a[i][j]);
+			}
+			printf("\n");
+		}
+	}
+	else
+	{
+		for (i=0;i<n;i++)
+		{
+			for (j=0;j<n;j++)
+			{
+				if (b[i][j]=='x')
+				{
+					printf("%d",c[i][j]);
+				}
+				else
+				{
+					printf("%c",b[i][j]);
+				}
+			}
+			printf("\n");
+		}
+	}
+	return 0;
+}
